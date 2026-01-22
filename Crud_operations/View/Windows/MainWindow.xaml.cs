@@ -29,7 +29,11 @@ namespace Crud_operations.View.Windows
         
         private void AddProductBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AddProductWindow addProductWindow = new AddProductWindow();
+            if(addProductWindow.ShowDialog() == true )
+            {
+                ProductsLv.ItemsSource=App.context.Product.ToList();
+            }
         }
 
         private void RemoveProductBtn_Click(object sender, RoutedEventArgs e)
@@ -40,7 +44,7 @@ namespace Crud_operations.View.Windows
             MessageBoxResult result = MessageBox.Show("Вы лействитеотно хотите удалить товар?","Вопрос",MessageBoxButton.YesNo,MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
-                    //DelZapic
+                    //Удаление записи
                     App.context.Product.Remove(selectedProduct);
 
                     MessageBox.Show("Товар удалён", "Информайия", MessageBoxButton.OK,MessageBoxImage.Information);

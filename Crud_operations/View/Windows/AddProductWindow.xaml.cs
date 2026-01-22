@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Crud_operations.Model;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,8 +42,23 @@ namespace Crud_operations.View.Windows
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
-        {
+        { 
+            Product product = new Product()
+            {
+                name = NameTB.Text,
+                price= Convert.ToDecimal(PriceTB.Text),
+                CategoryID = (int) CatCmb.SelectedValue,
+                Description= DescriptionTB.Text,
+                ReleaseDate=DataDP.SelectedDate.Value,
+                IsAvalible=IsAvailableCB.IsChecked.Value,
+                Photo = PhotoTB.Text,
+            };
+            App.context.Product.Add(product);
+            App.context.SaveChanges();
 
+            MessageBox.Show("Продукт успешно добавлен!","Информация", MessageBoxButton.OK,MessageBoxImage.Information);
+
+            DialogResult = true;
         }
     }
 }

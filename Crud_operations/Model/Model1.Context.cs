@@ -13,10 +13,10 @@ namespace Crud_operations.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class sqlexpressEntities : DbContext
+    public partial class sqlexpressEntities1 : DbContext
     {
-        public sqlexpressEntities()
-            : base("name=sqlexpressEntities")
+        public sqlexpressEntities1()
+            : base("name=sqlexpressEntities1")
         {
         }
     

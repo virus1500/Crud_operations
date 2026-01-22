@@ -14,6 +14,6 @@ namespace Crud_operations
     /// </summary>
     public partial class App : Application
     {
-        public static sqlexpressEntities context = new sqlexpressEntities();
+        public static sqlexpressEntities1 context = new sqlexpressEntities1();
     }
 }

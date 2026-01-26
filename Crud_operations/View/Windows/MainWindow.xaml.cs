@@ -58,7 +58,17 @@ namespace Crud_operations.View.Windows
 
         private void EditProductBtn_Click(object sender, RoutedEventArgs e)
         {
+            Product selectedProduct = ProductsLv.SelectedItem as Product;
+            if (selectedProduct != null)
+            {
+            EditWindow editWindow = new EditWindow(selectedProduct);
+                if (editWindow.ShowDialog() == true)
+                {
+                    ProductsLv.ItemsSource = App.context.Product.ToList();
+                }
 
+
+            }
         }
     }
 }

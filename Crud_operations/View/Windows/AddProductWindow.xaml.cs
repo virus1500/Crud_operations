@@ -25,7 +25,7 @@ namespace Crud_operations.View.Windows
         {
             InitializeComponent();
             CatCmb.ItemsSource = App.context.Category.ToList();//Загружаем список категорий
-            CatCmb.DisplayMemberPath = "Name";//Отображаем у элемента название
+            CatCmb.DisplayMemberPath = "name";//Отображаем у элемента название
             CatCmb.SelectedValuePath = "id";//При выборе элемента копируем ID
             CatCmb.SelectedIndex= 0;//Выбираем первый элемент списта по умолчанию
 

@@ -155,6 +155,7 @@
     <Folder Include="View\Pages\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\Unicode_Geschlechtersymbole.svg.png" />
     <Content Include="Model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

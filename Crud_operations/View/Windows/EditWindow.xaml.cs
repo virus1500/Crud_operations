@@ -50,7 +50,7 @@ namespace Crud_operations.View.Windows
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
-                PhotoTB.Text = openFileDialog.FileName;
+                selectedProduct.Photo = openFileDialog.FileName;
             }
         }
     }

@@ -38,8 +38,13 @@
         <ListView Name="ProductsLv" Grid.Row="2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Изображение" 
-                                    DisplayMemberBinding="{Binding Photo}"/>
+                    <GridViewColumn Header="Изображение">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Photo, FallbackValue=C:/Users/vboxuser/Desktop/Crud_operations/Crud_operations/Images/Unicode_Geschlechtersymbole.svg.png}" Height="100" Width="100"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                     <GridViewColumn Header="Название" 
                                     DisplayMemberBinding="{Binding name}"/>
                     <GridViewColumn Header="Цена" 
